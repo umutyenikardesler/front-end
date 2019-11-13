@@ -1,0 +1,274 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+.clear {
+    clear: both;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../font/Graphik-Regular.woff2') format('woff2'),
+        url('../font/Graphik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../font/Graphik-Light.woff2') format('woff2'),
+        url('../font/Graphik-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../font/Graphik-Medium.woff2') format('woff2'),
+        url('../font/Graphik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+html, body {
+	height: 100%;
+	font-family: Graphik, sans-serif;
+}
+
+body {
+	display: flex;
+}
+
+.sidebar {
+	width: 252px;
+	background: #4C52BC;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar .logo {
+	padding: 35px 0 65px 42px 
+}
+
+.sidebar .logo a {
+	display: block;
+}
+
+.sidebar .logo a img {
+	width: 36px;
+	height: 36px;
+}
+
+.sidebar .menu ul li a {
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 40px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, .6)
+}
+
+.sidebar .menu ul li a:hover {
+	color: #fff;
+}
+
+.sidebar .menu ul li.active a {
+	color: #fff;
+	background: linear-gradient(to left, transparent, rgba(255, 255, 255, .08));
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar .storage {
+	padding: 0 40px 35px;
+	margin-top: auto;
+}
+
+.sidebar .storage .title {
+	display: flex;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	align-items: center;
+}
+
+.sidebar .storage .title i {
+	margin-right: 7px;
+}
+
+.sidebar .storage .title .percent {
+	font-size: 12px;
+	color: rgba(255, 255, 255, .8);
+	font-weight: normal;
+	margin-left: auto;
+}
+
+.sidebar .storage .bar {
+	width: 100%;
+	height: 6px;
+	border-radius: 6px;
+	background: #30358A;
+	margin-top: 12px;
+}
+
+.sidebar .storage .bar span {
+	width: auto;
+	height: 6px;
+	border-radius: 6px;
+	background: #F8D9AF;
+	display: block;
+}
+
+.content {
+	flex: 1;
+	display: flex;
+}
+
+.content .inner {
+	flex: 1;
+	padding: 32px 65px;
+}
+
+.content .inner .search {
+	position: relative;
+}
+
+.content .inner .search label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #8F94B8;
+}
+
+.content .inner .search input {
+	width: 340px;
+	height: 44px;
+	border-radius: 44px;
+	background: rgba(202, 206, 231, .14);
+	font-size: 14px;
+	padding: 0 20px 0 50px;
+	box-sizing: border-box;
+	margin-bottom: 60px;
+}
+
+.content .inner .search input::placeholder {
+	color: #8F94B8;
+}
+
+.content .inner .inner-box {
+	margin-bottom: 60px;
+}
+
+.content .content-title {
+	padding-bottom: 6px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #F6F7FA;
+	align-items: center;
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.content .content-title::before {
+	content: '';
+	width: 85px;
+	height: 4px;
+	border-radius: 4px;
+	background: #C4E2E6;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+}
+
+.content .content-title h4{
+	font-size: 20px;
+	color: #0E1B42;
+	font-weight: 500;
+}
+
+.content .content-title a {
+	font-size: 14px;
+	color: #8186AD;
+}
+
+.content .content-title a i {
+	font-size: 11px;
+	margin-left: 8px;
+}
+
+.content .inner .inner-box .projects {
+	display: flex;
+	margin: 0 -7px;
+}
+
+.content .inner .inner-box .box {
+	flex: 1;
+	height: 145px;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+.content .inner .inner-box .box.active {
+	background: #F7F8FB;
+	margin-right: 7px;
+}
+
+.content .inner .inner-box .box.empty {
+	border: 2px dashed #E4E8F6;
+}
+
+.content .rightbar {
+	width: 360px;
+	padding: 32px 0;
+	border-left: 2px solid #F6F7FA;
+}
