@@ -24,6 +24,7 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	overflow: scroll;
 }
 body {
 	line-height: 1;
@@ -423,7 +424,64 @@ body {
 }
 
 .content .rightbar {
+	display: flex;
 	width: 360px;
-	padding: 32px 0;
+	padding: 32px 0px;
 	border-left: 2px solid #F6F7FA;
+}
+
+.content .rightbar .rightbar-header {
+	width: 100%;
+	height: 34px;
+	display: flex;
+	padding: 0 40px;
+    margin-bottom: 60px;
+}
+
+.content .rightbar .notification {
+	width: 45%;
+	line-height: 34px;
+	text-align: right;
+	padding-right: 5%;
+}
+
+.content .rightbar .notification a {
+	font-size: 18px;
+	color: #000;
+}
+
+.content .rightbar .notification a i {
+	width: 18px;
+	height: 18px;
+}
+
+.content .rightbar .account {
+	flex: 1;
+	display: flex;
+    align-items: center;
+}
+
+.content .rightbar .account .account-picture {
+	padding-left: 12%;
+}
+
+.content .rightbar .account .account-picture img{
+	width: 34px;
+	height: 34px;
+}
+
+.content .rightbar .account .account-title {
+	margin-left: auto;
+}
+
+.content .rightbar .account .account-title a {
+	font-size: 18px;
+	color: #0E1B42;
+}
+
+.content .rightbar .account .account-title a i {
+	transform: rotate(90deg);
+	margin-left: 7px;
+    font-size: 13px;
+    color: #B1B4CE;
 }
