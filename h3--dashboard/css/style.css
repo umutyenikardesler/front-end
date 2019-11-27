@@ -424,14 +424,13 @@ body {
 }
 
 .content .rightbar {
-	display: flex;
 	width: 360px;
 	padding: 32px 0px;
 	border-left: 2px solid #F6F7FA;
+	overflow: scroll;
 }
 
 .content .rightbar .rightbar-header {
-	width: 100%;
 	height: 34px;
 	display: flex;
 	padding: 0 40px;
@@ -472,6 +471,7 @@ body {
 
 .content .rightbar .account .account-title {
 	margin-left: auto;
+    padding-right: 5px;
 }
 
 .content .rightbar .account .account-title a {
@@ -485,3 +485,99 @@ body {
     font-size: 13px;
     color: #B1B4CE;
 }
+
+.content .rightbar .rightbar-content {
+	padding: 0 40px;
+}
+
+.content .rightbar .rightbar-content .rightbar-content-title {
+	width: 280px;
+	height: auto;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #F6F7FA;
+	margin-bottom: 35px;
+	position: relative;
+}
+
+.content .rightbar .rightbar-content .rightbar-content-title::before {
+	content: '';
+	width: 85px;
+	height: 4px;
+	border-radius: 4px;
+	background: #C4E2E6;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+}
+
+.content .rightbar .rightbar-content .rightbar-content-title h4{
+	font-size: 20px;
+	color: #0E1B42;
+	font-weight: 500;
+}
+
+
+.content .rightbar .rightbar-content .activities ul li.round {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+}
+.content .rightbar .rightbar-content .activities ul li.round .circle {
+	width: 15%;
+	margin-bottom: auto;
+}
+
+.content .rightbar .rightbar-content .activities ul li.round .circle .icon {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, .05);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	line-height: 25px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #4C52BC;
+}
+
+.content .rightbar .rightbar-content .activities ul li.round .dashed {
+	border-left: 2px solid #979797;
+	border-left-style: dashed;
+	position: relative;
+    top: 15px;
+	right: 30px;
+	min-height: 60px;
+}
+
+.content .rightbar .rightbar-content .activities ul li.round .text {
+	width: 75%;
+	font-size: 14px;
+	height: auto;
+	line-height: 20px;
+	
+}
+
+.content .rightbar .rightbar-content .activities ul li.round .text img.text-image {
+	padding: 10px 10px 0 0;
+}
+
+.content .rightbar .rightbar-content .activities ul li.round .time {
+	margin-left: auto;
+	font-size: 14px;
+	color: #979797;
+	margin-bottom: auto;
+}
+
+.content .rightbar .rightbar-footer {
+	flex: 1;
+	height: auto;
+	padding: 0 40px;
+	text-align: center;
+}
+
