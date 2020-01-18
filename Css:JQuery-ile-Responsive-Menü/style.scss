@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #eee;
+    .container {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        justify-content: space-between;
+        .logo {
+            a{
+                display: block;
+                img {
+                    height: 40px;
+                }
+            }
+        }
+    }
+    
+}

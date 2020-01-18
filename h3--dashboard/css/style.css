@@ -546,15 +546,6 @@ body {
 	color: #4C52BC;
 }
 
-.content .rightbar .rightbar-content .activities ul li.round .dashed {
-	border-left: 2px solid #979797;
-	border-left-style: dashed;
-	position: relative;
-    top: 15px;
-	right: 30px;
-	min-height: 60px;
-}
-
 .content .rightbar .rightbar-content .activities ul li.round .text {
 	width: 75%;
 	font-size: 14px;

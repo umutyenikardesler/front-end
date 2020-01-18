@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Css ile Kayan Arkaplan</title>
+</head>
+<body>
+    
+    <div class="browser">
+        <div class="header">
+            <span>
+
+            </span>
+        </div>
+        <div class="content" style="background-image: url(site.png);">
+
+        </div>
+    </div>
+
+
+<style>
+
+.browser {
+    width: 500px;
+    border: 1px solid #ddd;
+    margin: 50px auto;
+    border-radius: 3px;
+}
+
+.browser .content {
+    height: 300px;
+    background-size: cover;
+    transition: 8s all;
+}
+
+.browser:hover .content {
+    background-position: bottom;
+}
+
+.browser .header {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 25px;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+}
+
+.browser .header span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff2b21;
+    position: relative;
+}
+
+.browser .header span::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #32cc1f;
+    left: -14px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.browser .header span::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #ffb438;
+    right: -14px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+</style>
+</body>
+</html>
