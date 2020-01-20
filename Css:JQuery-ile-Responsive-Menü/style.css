@@ -3,6 +3,12 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*:focus {
+  outline: 0;
 }
 
 .container {
@@ -12,6 +18,7 @@
 
 .header {
   background: #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 .header .container {
@@ -33,5 +40,316 @@
 
 .header .container .logo a img {
   height: 40px;
+  padding-top: 10px;
+}
+
+.header .container .search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 20px;
+}
+
+.header .container .search form {
+  position: relative;
+}
+
+.header .container .search form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header .container .search form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  font-size: 16px;
+  color: #777;
+  cursor: pointer;
+}
+
+.header .container .menu {
+  padding: 0 15px;
+}
+
+.header .container .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .container .menu li {
+  margin-left: 35px;
+}
+
+.header .container .menu li:first-child {
+  margin-left: 0;
+}
+
+.header .container .menu li a {
+  display: block;
+  line-height: 40px;
+  color: #333;
+}
+
+.header .container .menu li.active a {
+  color: #1b40e7;
+  -webkit-box-shadow: 0 -3px 0 0 #1b40e7 inset;
+          box-shadow: 0 -3px 0 0 #1b40e7 inset;
+}
+
+.header .container .social {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid #ddd;
+}
+
+.header .container .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .container .social ul li {
+  margin-left: 10px;
+}
+
+.header .container .social ul li:first-child {
+  margin-left: 0;
+}
+
+.header .container .social ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.header .container .social ul li a span {
+  display: none;
+}
+
+.header .container .social ul li.facebook a {
+  background: #3b5998;
+}
+
+.header .container .social ul li.twitter a {
+  background: #1da1f2;
+}
+
+.header .container .menu-btn {
+  width: 60px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 21px;
+  color: #333;
+  margin-right: -20px;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.responsive-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 99;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.responsive-menu.active {
+  left: 0;
+  opacity: 1;
+}
+
+.responsive-menu .close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.responsive-menu .logo a img {
+  height: 40px;
+}
+
+.responsive-menu .search {
+  margin-top: 20px;
+}
+
+.responsive-menu .search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.responsive-menu .search form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  font-size: 16px;
+  color: #999;
+}
+
+.responsive-menu .search form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.responsive-menu .menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.responsive-menu .menu ul {
+  padding: 15px 0;
+}
+
+.responsive-menu .menu ul li a {
+  padding: 10px 10px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 3px;
+}
+
+.responsive-menu .menu ul li.active a {
+  color: #1b40e7;
+  background: rgba(27, 64, 231, 0.03);
+  -webkit-box-shadow: -3px 0 0 0 #1b40e7 inset;
+          box-shadow: -3px 0 0 0 #1b40e7 inset;
+}
+
+.responsive-menu .social {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.responsive-menu .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.responsive-menu .social ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.responsive-menu .social ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.responsive-menu .social ul li a span {
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.responsive-menu .social ul li a i {
+  margin-right: 10px;
+}
+
+.responsive-menu .social ul li.facebook a i {
+  color: #3b5998;
+}
+
+.responsive-menu .social ul li.twitter a i {
+  color: #1da1f2;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-hide {
+    display: none;
+  }
+  .mobile-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */

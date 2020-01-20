@@ -7,10 +7,15 @@
     <title>Css/JQuery ile Responsive Menü</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
-     
+    
+    <div class="responsive-menu" id="responsive-menu">
+
+    </div>
+
     <div class="header">
         <div class="container">
 
@@ -20,22 +25,26 @@
                 </a>
             </div>
 
-            <div class="search">
+            <a href="#" class="mobile-show menu-btn" id="open-menu-btn">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="mobile-hide search">
                 <form action="">
-                    <input type="text" name="Ara..">
+                    <input type="text" placeholder="Ara..">
                     <button type="submit">
                         <i class="fa fa-search"></i>
                     </button>
                 </form>
             </div>
 
-            <div class="menu">
+            <div class="mobile-hide menu">
                 <ul>
                     <li>
                         <a href="#">About</a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#">Firefox</a>
                     </li>
                     <li>
@@ -47,16 +56,18 @@
                 </ul>
             </div>
 
-            <div class="social">
+            <div class="mobile-hide social">
                 <ul>
-                    <li>
+                    <li class="facebook">
                         <a href="#">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="twitter">
                         <a href="#">
                             <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
                         </a>
                     </li>
                 </ul>

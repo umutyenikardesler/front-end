@@ -3,6 +3,11 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    &:focus {
+        outline: 0;
+    }
 }
 
 .container {
@@ -12,6 +17,7 @@
 
 .header {
     background: #eee;
+    border-bottom: 1px solid #ddd;
     .container {
         display: flex;
         align-items: center;
@@ -22,9 +28,237 @@
                 display: block;
                 img {
                     height: 40px;
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .search {
+            flex: 1;
+            margin: 0 20px;
+            form {
+                position: relative;
+                input {
+                    width: 100%;
+                    height: 40px;
+                    border-radius: 40px;
+                    background: #fff;
+                    box-sizing: border-box;
+                    padding: 0 15px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 40px;
+                    background: transparent;
+                    font-size: 16px;
+                    color: #777;
+                    cursor: pointer;
+                }
+            }
+        }
+        .menu {
+            padding: 0 15px;
+            ul {
+                display: flex;
+            }
+            li {
+                margin-left: 35px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    display: block;
+                    line-height: 40px;
+                    color: #333;
+                }
+                &.active a {
+                    color: rgb(27, 64, 231) ;
+                    box-shadow: 0 -3px 0 0 rgb(27, 64, 231) inset;
+                }
+            }
+        }
+        .social {
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid #ddd;
+            ul{
+                display: flex;
+                li {
+                    margin-left: 10px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    a {
+                        display: flex;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 18px;
+                        color: #fff;
+                        span {
+                            display: none;
+                        }
+                    }
+                    &.facebook a {
+                        background: #3b5998;
+                    }
+                    &.twitter a {
+                        background: #1da1f2;
+                    }
+                }
+            }
+        }
+        .menu-btn {
+            width: 60px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            color: #333;
+            margin-right: -20px;
+        }
+    }
+    
+}
+
+.mobile-show {
+    display: none;
+}
+
+.responsive-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 99;
+    transition: 400ms all;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    &.active {
+        left: 0;
+        opacity: 1;
+    }
+    .close-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #333;
+    }
+    .logo {
+        a img {
+            height: 40px;
+        }
+    }
+    .search {
+        margin-top: 20px;
+        form {
+            display: flex;
+            position: relative;
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                font-size: 16px;
+                color: #999;
+            }
+            input {
+                flex: 1;
+                height: 40px;
+                border: 1px solid #ddd;
+                border-radius: 40px;
+                font-size: 14px;
+                font-weight: 500;
+                padding: 0 15px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .menu {
+        flex: 1;
+        ul{
+            padding: 15px 0;
+            li {
+                a {
+                    padding: 10px 10px;
+                    display: block;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #333;
+                    border-radius: 3px;
+                }
+                &.active a {
+                    color: rgb(27, 64, 231) ;
+                    background: rgba(27, 64, 231, .03);
+                    box-shadow: -3px 0 0 0 rgb(27, 64, 231) inset;
                 }
             }
         }
     }
-    
+    .social {
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    span {
+                        color: #555;
+                        font-size: 14px;
+                        font-weight: 500; 
+                    }
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+                &.facebook a i {
+                    color: #3b5998;
+                }
+                &.twitter a i {
+                    color: #1da1f2;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-hide {
+        display: none;
+    }
+    .mobile-show {
+        display: flex;
+    }
 }
